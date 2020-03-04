@@ -32,7 +32,6 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 </script>
 
 
-<link rel="stylesheet" href="css\style.css" type="text/css" />
 
 </head>
 
@@ -49,29 +48,51 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <h2>Set up</h2>
 <div id="section-please-set-up-your-computer-with-the-following-instructions" class="section level4">
 <h4><strong>Please set up your computer with the following instructions:</strong></h4>
-<ol style="list-style-type: decimal">
-<li><p>Please Open your RStudio</p></li>
-<li><p>Open the project you created before.</p></li>
-</ol>
+</div>
+<div id="section-please-open-your-rstudio" class="section level4">
+<h4>1. Please Open your RStudio</h4>
+</div>
+<div id="section-open-the-project-you-created-before." class="section level4">
+<h4>2. Open the project you created before.</h4>
 <p>For example, we created a project shiba before. Now, we want to open it.</p>
-<p><img src="images/Open_project.png" style="width:60.0%;height:60.0%" /></p>
-<ol start="3" style="list-style-type: decimal">
-<li>Create a R Markdown file,</li>
-</ol>
-<p><img src="images/Rmarkdown_creat.png" style="width:50.0%;height:50.0%" /></p>
+<div class="figure">
+<img src="images/Open_project.png" style="width:60.0%" style="height:60.0%" />
+
+</div>
+</div>
+<div id="section-create-a-r-markdown-file" class="section level4">
+<h4>3. Create a R Markdown file,</h4>
+<div class="figure">
+<img src="images/Rmarkdown_creat.png" style="width:50.0%" style="height:50.0%" />
+
+</div>
 <p>Then select <code>HTML</code> output format.</p>
-<p><img src="images/Rmd_output_format.png" style="width:60.0%;height:60.0%" /></p>
-<ol start="4" style="list-style-type: decimal">
-<li><p>Enter the link into your web browser : <a href="http://bit.ly/MonashBA_R2" class="uri">http://bit.ly/MonashBA_R2</a></p></li>
-<li><p>Go down to <code>Workshop Contents</code>, then click <code>Data Visualisation (23 August)</code> to open the material of workshop 3.</p></li>
-</ol>
-<p><img src="images/workshop3_slideLink.png" style="width:60.0%;height:60.0%" /></p>
-<ol start="6" style="list-style-type: decimal">
-<li>Click <code>chocolate.csv</code> to download the csv file,</li>
-</ol>
-<p><img src="images/workshop3_slideLink.png" style="width:60.0%;height:60.0%" /></p>
+<div class="figure">
+<img src="images/Rmd_output_format.png" style="width:60.0%" style="height:60.0%" />
+
+</div>
+</div>
+<div id="section-enter-the-link-into-your-web-browser-httpbit.lymonashba_r2" class="section level4">
+<h4>4. Enter the link into your web browser : <a href="http://bit.ly/MonashBA_R2" class="uri">http://bit.ly/MonashBA_R2</a></h4>
+</div>
+<div id="section-go-down-to-workshop-contents-then-click-data-visualisation-23-august-to-open-the-material-of-workshop-3." class="section level4">
+<h4>5. Go down to <code>Workshop Contents</code>, then click <code>Data Visualisation (23 August)</code> to open the material of workshop 3.</h4>
+<div class="figure">
+<img src="images/workshop3_slideLink.png" style="width:60.0%" style="height:60.0%" />
+
+</div>
+</div>
+<div id="section-click-chocolate.csv-to-download-the-csv-file" class="section level4">
+<h4>6. Click <code>chocolate.csv</code> to download the csv file,</h4>
+<div class="figure">
+<img src="images/workshop3_slideLink.png" style="width:60.0%" style="height:60.0%" />
+
+</div>
 <p>Then save it under the <code>data</code> sub directory of your project.</p>
-<p><img src="images/Data_subdirectory.png" style="width:60.0%;height:60.0%" /></p>
+<div class="figure">
+<img src="images/Data_subdirectory.png" style="width:60.0%" style="height:60.0%" />
+
+</div>
 </div>
 </div>
 <div id="section-instructors-for-workshop-3" class="section level2">
@@ -128,21 +149,21 @@ chocolates &lt;- read_csv(&quot;data/chocolates.csv&quot;)</code></pre>
 <pre class="r"><code>glimpse(chocolates) </code></pre>
 <pre><code>## Observations: 88
 ## Variables: 15
-## $ Name         &lt;chr&gt; &quot;Noir 86% Cacao&quot;, &quot;70% Cocoa&quot;, &quot;Solid Dark Chocol...
-## $ MFR          &lt;chr&gt; &quot;Cote D&#39;Or&quot;, &quot;Cote D&#39;Or&quot;, &quot;Godiva&quot;, &quot;Godiva&quot;, &quot;Gu...
-## $ Country      &lt;chr&gt; &quot;Belgium&quot;, &quot;Belgium&quot;, &quot;Belgium&quot;, &quot;Belgium&quot;, &quot;Belg...
-## $ Type         &lt;fct&gt; Dark, Dark, Dark, Dark, Dark, Dark, Dark, Dark, D...
-## $ Calories     &lt;dbl&gt; 460.0000, 600.0000, 534.8837, 534.8837, 575.7576,...
-## $ CalFat       &lt;dbl&gt; 380.0000, 432.0000, 302.3256, 348.8372, 333.3333,...
-## $ TotFat_g     &lt;dbl&gt; 44.00000, 48.00000, 32.55814, 39.53488, 39.39394,...
-## $ SatFat_g     &lt;dbl&gt; 26.00000, 30.00000, 20.93023, 20.93023, 24.24242,...
-## $ Chol_mg      &lt;dbl&gt; 0.0000000, 10.0000000, 0.0000000, 0.0000000, 0.00...
-## $ Na_mg        &lt;dbl&gt; 0.00000, 0.00000, 0.00000, 81.39535, 90.90909, 12...
-## $ Carbs_g      &lt;dbl&gt; 28.00000, 42.00000, 60.46512, 41.86047, 48.48485,...
-## $ Fiber_g      &lt;dbl&gt; 10.000000, 10.000000, 9.302326, 13.953488, 12.121...
-## $ Sugars_g     &lt;dbl&gt; 10.00000, 28.00000, 46.51163, 27.90698, 33.33333,...
-## $ Protein_g    &lt;dbl&gt; 8.000000, 8.000000, 6.976744, 9.302326, 9.090909,...
-## $ Contain_Chol &lt;lgl&gt; FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, F...</code></pre>
+## $ Name         &lt;chr&gt; &quot;Noir 86% Cacao&quot;, &quot;70% Cocoa&quot;, &quot;Solid Dark Chocolat…
+## $ MFR          &lt;chr&gt; &quot;Cote D&#39;Or&quot;, &quot;Cote D&#39;Or&quot;, &quot;Godiva&quot;, &quot;Godiva&quot;, &quot;Guyl…
+## $ Country      &lt;chr&gt; &quot;Belgium&quot;, &quot;Belgium&quot;, &quot;Belgium&quot;, &quot;Belgium&quot;, &quot;Belgiu…
+## $ Type         &lt;fct&gt; Dark, Dark, Dark, Dark, Dark, Dark, Dark, Dark, Dar…
+## $ Calories     &lt;dbl&gt; 460.0000, 600.0000, 534.8837, 534.8837, 575.7576, 5…
+## $ CalFat       &lt;dbl&gt; 380.0000, 432.0000, 302.3256, 348.8372, 333.3333, 3…
+## $ TotFat_g     &lt;dbl&gt; 44.00000, 48.00000, 32.55814, 39.53488, 39.39394, 3…
+## $ SatFat_g     &lt;dbl&gt; 26.00000, 30.00000, 20.93023, 20.93023, 24.24242, 0…
+## $ Chol_mg      &lt;dbl&gt; 0.0000000, 10.0000000, 0.0000000, 0.0000000, 0.0000…
+## $ Na_mg        &lt;dbl&gt; 0.00000, 0.00000, 0.00000, 81.39535, 90.90909, 121.…
+## $ Carbs_g      &lt;dbl&gt; 28.00000, 42.00000, 60.46512, 41.86047, 48.48485, 5…
+## $ Fiber_g      &lt;dbl&gt; 10.000000, 10.000000, 9.302326, 13.953488, 12.12121…
+## $ Sugars_g     &lt;dbl&gt; 10.00000, 28.00000, 46.51163, 27.90698, 33.33333, 1…
+## $ Protein_g    &lt;dbl&gt; 8.000000, 8.000000, 6.976744, 9.302326, 9.090909, 6…
+## $ Contain_Chol &lt;lgl&gt; FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FAL…</code></pre>
 <pre class="r"><code>dim(chocolates)</code></pre>
 <pre><code>## [1] 88 15</code></pre>
 <pre class="r"><code>names(chocolates)</code></pre>
@@ -186,7 +207,7 @@ chocolates &lt;- read_csv(&quot;data/chocolates.csv&quot;)</code></pre>
 <ul>
 <li><p>Motor Trend Car Road Tests – the data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models).</p></li>
 <li><p>Use <code>help()</code> function to find more information</p></li>
-<li><p>Important variables:</p>
+<li>Important variables:
 <ul>
 <li>mpg – Miles/(US) gallon</li>
 <li>cyl – Number of cylinders</li>
@@ -199,17 +220,17 @@ chocolates &lt;- read_csv(&quot;data/chocolates.csv&quot;)</code></pre>
 <pre class="r"><code>glimpse(mtcars)</code></pre>
 <pre><code>## Observations: 32
 ## Variables: 11
-## $ mpg  &lt;dbl&gt; 21.0, 21.0, 22.8, 21.4, 18.7, 18.1, 14.3, 24.4, 22.8, 19....
-## $ cyl  &lt;dbl&gt; 6, 6, 4, 6, 8, 6, 8, 4, 4, 6, 6, 8, 8, 8, 8, 8, 8, 4, 4, ...
-## $ disp &lt;dbl&gt; 160.0, 160.0, 108.0, 258.0, 360.0, 225.0, 360.0, 146.7, 1...
-## $ hp   &lt;dbl&gt; 110, 110, 93, 110, 175, 105, 245, 62, 95, 123, 123, 180, ...
-## $ drat &lt;dbl&gt; 3.90, 3.90, 3.85, 3.08, 3.15, 2.76, 3.21, 3.69, 3.92, 3.9...
-## $ wt   &lt;dbl&gt; 2.620, 2.875, 2.320, 3.215, 3.440, 3.460, 3.570, 3.190, 3...
-## $ qsec &lt;dbl&gt; 16.46, 17.02, 18.61, 19.44, 17.02, 20.22, 15.84, 20.00, 2...
-## $ vs   &lt;dbl&gt; 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, ...
-## $ am   &lt;dbl&gt; 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, ...
-## $ gear &lt;dbl&gt; 4, 4, 4, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, ...
-## $ carb &lt;dbl&gt; 4, 4, 1, 1, 2, 1, 4, 2, 2, 4, 4, 3, 3, 3, 4, 4, 4, 1, 2, ...</code></pre>
+## $ mpg  &lt;dbl&gt; 21.0, 21.0, 22.8, 21.4, 18.7, 18.1, 14.3, 24.4, 22.8, 19.2,…
+## $ cyl  &lt;dbl&gt; 6, 6, 4, 6, 8, 6, 8, 4, 4, 6, 6, 8, 8, 8, 8, 8, 8, 4, 4, 4,…
+## $ disp &lt;dbl&gt; 160.0, 160.0, 108.0, 258.0, 360.0, 225.0, 360.0, 146.7, 140…
+## $ hp   &lt;dbl&gt; 110, 110, 93, 110, 175, 105, 245, 62, 95, 123, 123, 180, 18…
+## $ drat &lt;dbl&gt; 3.90, 3.90, 3.85, 3.08, 3.15, 2.76, 3.21, 3.69, 3.92, 3.92,…
+## $ wt   &lt;dbl&gt; 2.620, 2.875, 2.320, 3.215, 3.440, 3.460, 3.570, 3.190, 3.1…
+## $ qsec &lt;dbl&gt; 16.46, 17.02, 18.61, 19.44, 17.02, 20.22, 15.84, 20.00, 22.…
+## $ vs   &lt;dbl&gt; 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1,…
+## $ am   &lt;dbl&gt; 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1,…
+## $ gear &lt;dbl&gt; 4, 4, 4, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, 4,…
+## $ carb &lt;dbl&gt; 4, 4, 1, 1, 2, 1, 4, 2, 2, 4, 4, 3, 3, 3, 4, 4, 4, 1, 2, 1,…</code></pre>
 </div>
 <div id="section-simple-point-plot" class="section level3">
 <h3>Simple point plot</h3>
@@ -497,12 +518,6 @@ mtcars %&gt;%
 <li><p><a href="https://www.youtube.com/watch?v=AmqxVDlfKQY">useR! 2018 beginners tutorial: RCurious</a></p></li>
 </ul>
 </div>
-<div id="section-webinars" class="section level3">
-<h3>Webinars</h3>
-<ul>
-<li><a href="https://github.com/rstudio/webinars">RStudio webinars</a></li>
-</ul>
-</div>
 <div id="section-blogs" class="section level3">
 <h3>Blogs</h3>
 <ul>
@@ -522,7 +537,10 @@ mtcars %&gt;%
 <p><strong>3 minutes feedback</strong> : <a href="https://docs.google.com/forms/d/e/1FAIpQLScNvF28ZglZt6EHdjKvr8wyJK9tVep85kl1rtGZPb4SydnLHg/viewform" class="uri">https://docs.google.com/forms/d/e/1FAIpQLScNvF28ZglZt6EHdjKvr8wyJK9tVep85kl1rtGZPb4SydnLHg/viewform</a></p>
 <div id="section-once-you-completed-the-feedback-you-can-collect-a-hexagonal-sticker-from-the-helpers-in-next-workshop." class="section level4">
 <h4>Once you completed the feedback, you can collect a hexagonal sticker from the helpers in next Workshop.</h4>
-<p><img src="images/Hexwall.png" style="width:100.0%;height:100.0%" /></p>
+<div class="figure">
+<img src="images/Hexwall.png" style="width:100.0%" style="height:100.0%" />
+
+</div>
 (<a href="https://github.com/mitchelloharawild/hexwall">R script to neatly align hexagon stickers</a>, by Mitchell O’Hara-Wild) 
 <script type="application/shiny-prerendered" data-context="server-start">
 # Check wether the pakcages exist and install the rquired packages
@@ -554,7 +572,7 @@ learnr:::register_http_handlers(session, metadata = NULL)
 <!--/html_preserve-->
 <!--html_preserve-->
 <script type="application/shiny-prerendered" data-context="execution_dependencies">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81]}},"value":[{"type":"character","attributes":{},"value":["assertthat","backports","base","broom","cellranger","cli","colorspace","compiler","crayon","datasets","digest","dplyr","evaluate","fansi","forcats","generics","GGally","ggplot2","glue","graphics","grDevices","grid","gridExtra","gtable","haven","hms","htmltools","htmlwidgets","httpuv","httr","jsonlite","knitr","labeling","later","lattice","lazyeval","learnr","lubridate","magrittr","markdown","methods","mime","modelr","munsell","nlme","pillar","pkgconfig","plyr","promises","purrr","R6","RColorBrewer","Rcpp","readr","readxl","reshape","reshape2","rlang","rmarkdown","rprojroot","rstudioapi","rvest","scales","shiny","stats","stringi","stringr","tibble","tidyr","tidyselect","tidyverse","tools","utf8","utils","vctrs","withr","xfun","xml2","xtable","yaml","zeallot"]},{"type":"character","attributes":{},"value":["0.2.1","1.1.4","3.6.1","0.5.2","1.1.0","1.1.0","1.4-1","3.6.1","1.3.4","3.6.1","0.6.20","0.8.3","0.14","0.4.0","0.4.0","0.0.2","1.4.0","3.2.1","1.3.1","3.6.1","3.6.1","3.6.1","2.3","0.3.0","2.1.1","0.5.0","0.3.6","1.3","1.5.1","1.4.0","1.6","1.24","0.3","0.8.0","0.20-38","0.2.2","0.9.2.1","1.7.4","1.5","1.1","3.6.1","0.7","0.1.4","0.5.0","3.1-140","1.4.2","2.0.2","1.8.4","1.0.1","0.3.2","2.4.0","1.1-2","1.0.2","1.3.1","1.3.1","0.8.8","1.4.3","0.4.0","1.14","1.3-2","0.10","0.3.4","1.0.0","1.3.2","3.6.1","1.4.3","1.4.0","2.1.3","0.8.3","0.2.5","1.2.1","3.6.1","1.1.4","3.6.1","0.2.0","2.1.2","0.8","1.2.1","1.8-4","2.2.0","0.1.0"]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81]}},"value":[{"type":"character","attributes":{},"value":["assertthat","backports","base","broom","cellranger","cli","colorspace","compiler","crayon","datasets","digest","dplyr","evaluate","fansi","forcats","generics","GGally","ggplot2","glue","graphics","grDevices","grid","gridExtra","gtable","haven","hms","htmltools","htmlwidgets","httpuv","httr","jsonlite","knitr","labeling","later","lattice","lazyeval","learnr","lubridate","magrittr","markdown","methods","mime","modelr","munsell","nlme","pillar","pkgconfig","plyr","promises","purrr","R6","RColorBrewer","Rcpp","readr","readxl","reshape","reshape2","rlang","rmarkdown","rprojroot","rstudioapi","rvest","scales","shiny","stats","stringi","stringr","tibble","tidyr","tidyselect","tidyverse","tools","utf8","utils","vctrs","withr","xfun","xml2","xtable","yaml","zeallot"]},{"type":"character","attributes":{},"value":["0.2.1","1.1.4","3.6.0","0.5.2","1.1.0","1.1.0","1.4-1","3.6.0","1.3.4","3.6.0","0.6.20","0.8.3","0.14","0.4.0","0.4.0","0.0.2","1.4.0","3.2.0","1.3.1.9000","3.6.0","3.6.0","3.6.0","2.3","0.3.0","2.1.1","0.5.0","0.3.6","1.3","1.5.1","1.4.0","1.6","1.23","0.3","0.8.0","0.20-38","0.2.2","0.9.2.1","1.7.4","1.5","1.0","3.6.0","0.7","0.1.4","0.5.0","3.1-140","1.4.2","2.0.2","1.8.4","1.0.1","0.3.2","2.4.0","1.1-2","1.0.2","1.3.1","1.3.1","0.8.8","1.4.3","0.4.0","1.14","1.3-2","0.10","0.3.4","1.0.0","1.3.2","3.6.0","1.4.3","1.4.0","2.1.3","0.8.3","0.2.5","1.2.1","3.6.0","1.1.4","3.6.0","0.2.0","2.1.2","0.8","1.2.0","1.8-4","2.2.0","0.1.0"]}]}]}
 </script>
 <!--/html_preserve-->
 </div>

@@ -23,7 +23,7 @@ tutorial_html_dependency()
 # Check wether the pakcages exist and install the rquired pakage
 check_package <- function(package_name){
   if(!package_name %in% installed.packages())
-    install.packages(package_name, repos = "http://cran.us.r-project.org")
+    install.packages(package_name)
 }
 
 check_package("rmarkdown")
